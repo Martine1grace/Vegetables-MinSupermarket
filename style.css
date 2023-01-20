@@ -112,7 +112,7 @@ header{
 }
 .container{
     position: relative;
-    width: 100%;
+    width: 100%; 
     min-height:640px ;
     display: flex;
     align-items: center;
@@ -123,11 +123,15 @@ header{
     overflow: hidden;
 }
 .container img{
-    width:400px ;
-    position: absolute;
-    bottom: -500px;
-    right: 200px;
+    width: 100%;
+    border:15%;
 }
+/* .container img{
+    width:40px ;
+    position: absolute;
+    bottom: -50px;
+    right: 20px;
+} */
 .home-text{
     padding: 0 150px;
 }
@@ -410,16 +414,17 @@ header{
 .review-profile h3{
     font-size: 1rem;
     font-weight: 600;
+    text-align: left;
 }
-footer{
+.footer{
     max-width: 968px;
     margin-left: auto;
     margin-right: auto;
     display: grid;
-     grid-template-columns: repeat(auto-fit,minmax(200px,auto)); 
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
     gap: 1.5rem;
     margin-top: 2rem;
-    background:#fef4ea ;
+    background:#dcdbd9 ;
     padding: 20px;
     border-radius: 0.5rem;
 }
@@ -455,7 +460,7 @@ footer{
     margin-bottom: 1rem;
 }
 .footer-box a{
-     color: #878a92;
+     color: #3c3e42;
      margin-bottom: 1rem;
 }
 .footer-box a:hover{
@@ -507,7 +512,11 @@ footer{
     .home-text h1{
         font-size: 2rem;
     }
-    .swiper-button-next,.swiper-button-prev{
+    .home-text{
+        padding: 0 5%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
         margin: 0;
      }
 }
@@ -557,5 +566,72 @@ footer{
 @media(max-width:712px){
     .container img{
         right: 20px;
+    }
+    .heading h1{
+        font-size: 1.2rem;
+    }
+    .about{
+        grid-template-columns: repeat(auto-fit,minmax(20rem,auto));
+    }
+    .about img{
+        order: 2;
+    }
+    .about-text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        max-width: 164px;
+    }
+    .customers h2{
+        font-size: 1.2rem;
+    }
+}
+@media(max-width:642px){
+    .container{
+        right: 0;
+        width: 370px;
+    }
+}
+@media(max-width:546px){
+    .container{
+        right: 0;
+        width: 370px;
+        height: 820px;
+        object-fit: contain;
+    }
+}
+@media(max-width:370px){
+    .logo{
+       font-size: 1rem;
+    }
+    .profile img{
+        width: 30px;
+        height: 30px;
+    }
+    .profile span{
+        font-size: 10px;
+    }
+    .home-text{
+        padding-bottom: 17rem;
+    }
+    .home-text .span{
+        font-size: 0.8rem;
+    }
+    .home-text h1{
+        font-size: 1.4rem;
+    }
+    .heading{
+        flex-direction: column;
+        text-align: center;
+    }
+    .heading .btn{
+        margin-top: 1rem;
+    }
+    .categories-content{
+        gap: 1.5rem;
     }
 }
